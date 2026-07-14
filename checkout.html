@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Checkout — miniprint</title>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <button class="menu-btn" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="20" height="20"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="product.html" class="nav-link">Shop</a>
+      </nav>
+    </div>
+    <a href="index.html" class="nav-logo">mini<span class="text-blush-deep">print</span></a>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="account.html" class="nav-link">Account</a>
+      </nav>
+      <button class="cart-btn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div class="mobile-menu-inner">
+      <a href="index.html">Home</a>
+      <a href="product.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="account.html">Account</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<div id="checkoutView" class="container-md">
+  <div class="checkout-layout">
+    <form class="checkout-form" id="checkoutForm">
+      <div>
+        <p class="product-eyebrow">Checkout</p>
+        <h1 class="checkout-title">Almost yours.</h1>
+      </div>
+
+      <section>
+        <h2 class="form-section-title">Contact</h2>
+        <div class="field">
+          <label>
+            <span class="field-label">Email</span>
+            <input type="email" placeholder="you@memory.co" required />
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="form-section-title">Shipping</h2>
+        <div class="field-grid two">
+          <div class="field"><label><span class="field-label">First name</span><input type="text" required /></label></div>
+          <div class="field"><label><span class="field-label">Last name</span><input type="text" required /></label></div>
+          <div class="field span-2"><label><span class="field-label">Address</span><input type="text" required /></label></div>
+          <div class="field"><label><span class="field-label">City</span><input type="text" required /></label></div>
+          <div class="field"><label><span class="field-label">Postal code</span><input type="text" required /></label></div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="form-section-title">Payment</h2>
+        <div class="secure-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Secure, encrypted, no fuss.
+        </div>
+        <div class="field-grid" style="margin-top:1rem;">
+          <div class="field"><label><span class="field-label">Card number</span><input type="text" placeholder="•••• •••• •••• ••••" required /></label></div>
+          <div class="field-grid two">
+            <div class="field"><label><span class="field-label">Expiry</span><input type="text" placeholder="MM/YY" required /></label></div>
+            <div class="field"><label><span class="field-label">CVC</span><input type="text" placeholder="•••" required /></label></div>
+          </div>
+        </div>
+      </section>
+
+      <button type="submit" class="btn btn-primary" id="payBtn" style="width:100%;padding:1.25rem;">Pay $0.00</button>
+    </form>
+
+    <aside class="summary-sticky">
+      <div class="order-summary">
+        <h2 class="summary-title">Your order</h2>
+        <div id="summaryContent"></div>
+      </div>
+      <a href="product.html" class="continue-link" style="display:inline-block;">Continue shopping</a>
+    </aside>
+  </div>
+</div>
+
+<div id="thankYouView" class="thankyou" style="display:none;">
+  <div class="thankyou-inner">
+    <div class="thankyou-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h1>Thank you.</h1>
+    <p>Your miniprint is on its way. We've sent a confirmation to your inbox.</p>
+    <a href="index.html" class="btn btn-primary">Back home</a>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <p class="footer-logo">mini<span class="text-blush-deep">print</span></p>
+      <p class="footer-desc">A pocket-sized thermal printer for the little moments worth keeping. Ink-free, wireless, and made to travel.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Shop</p>
+      <ul class="footer-links">
+        <li><a href="product.html">miniprint</a></li>
+        <li><a href="about.html">Our story</a></li>
+        <li><a href="account.html">Account</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Support</p>
+      <ul class="footer-links muted">
+        <li>Shipping & returns</li>
+        <li>Warranty</li>
+        <li>hello@miniprint.co</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span>© 2026 miniprint. Small printer, big memories.</span>
+      <span>Made with care.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay"></div>
+<aside class="cart-drawer">
+  <div class="cart-head">
+    <h3 style="font-family:var(--font-display);font-size:1.5rem;">Your bag</h3>
+    <button class="cart-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="cart-body"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span>Subtotal</span><span>$0.00</span></div>
+    <a href="checkout.html" class="btn-primary" style="display:block;text-align:center;">Checkout</a>
+    <p class="cart-footer-note">Free shipping · 30-day returns</p>
+  </div>
+</aside>
+
+<script src="main.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>
