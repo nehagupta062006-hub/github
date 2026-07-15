@@ -17,7 +17,7 @@
       .map(
         (it) => `
       <div class="summary-item">
-        <div class="art-block art-hero" style="height:4rem;width:4rem;border-radius:0.75rem;flex-shrink:0;"></div>
+        <div class="art-block art-hero" style="height:4rem;width:4rem;border-radius:0.75rem;flex-shrink:0;"><img src="images/product-box.jpeg" alt="${it.name}" loading="lazy"></div>
         <div class="summary-item-info">
           <div>
             <p class="name">${it.name}</p>

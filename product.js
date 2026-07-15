@@ -5,12 +5,19 @@
     /* Gallery */
     const main = document.getElementById("galleryMain");
     const thumbs = document.querySelectorAll("#galleryThumbs .thumb-btn");
+    const galleryImages = {
+      hero: "images/product-box.jpeg",
+      features: "images/grid-9.jpeg",
+      woman: "images/woman-cat.jpeg",
+      lifestyle: "images/lifestyle-side.jpeg",
+      gallery: "images/cat-print-closeup.jpeg",
+    };
     thumbs.forEach((btn) => {
       btn.addEventListener("click", () => {
         thumbs.forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
         const tint = btn.dataset.tint;
-        main.innerHTML = `<div class="art-block art-${tint}"></div>`;
+        main.innerHTML = `<div class="art-block art-${tint}"><img src="${galleryImages[tint]}" alt="miniprint ${tint}" loading="lazy"></div>`;
         main.style.opacity = 0;
         requestAnimationFrame(() => {
           main.style.transition = "opacity .5s ease";

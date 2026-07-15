@@ -398,12 +398,12 @@ main { padding-top: 4rem; }
 }
 .art-block::before { content: ""; position: absolute; inset: 0; opacity: .5; }
 .art-block svg { position: relative; z-index: 1; width: 40%; height: 40%; opacity: .85; }
-.art-poster { background: radial-gradient(120% 100% at 50% 100%, var(--blush) 0%, var(--mint) 45%, var(--cream) 100%); }
-.art-hero { background: linear-gradient(160deg, var(--mint) 0%, color-mix(in oklch, var(--mint) 40%, var(--cream)) 100%); }
-.art-woman { background: linear-gradient(160deg, var(--blush) 0%, color-mix(in oklch, var(--blush) 30%, var(--cream)) 100%); }
-.art-lifestyle { background: linear-gradient(160deg, color-mix(in oklch, var(--mint) 60%, var(--cream)) 0%, var(--cream) 100%); }
-.art-features { background: linear-gradient(160deg, color-mix(in oklch, var(--blush) 55%, var(--cream)) 0%, var(--cream) 100%); }
-.art-gallery { background: linear-gradient(135deg, var(--mint) 0%, var(--blush) 100%); }
+.art-poster { background: url("images/poster-hero.jpeg") center/cover no-repeat; }
+.art-hero { background: url("images/product-box.jpeg") center/cover no-repeat; }
+.art-woman { background: url("images/woman-cat.jpeg") center/cover no-repeat; }
+.art-lifestyle { background: url("images/lifestyle-side.jpeg") center/cover no-repeat; }
+.art-features { background: url("images/grid-9.jpeg") center/cover no-repeat; }
+.art-gallery { background: url("images/cat-print-closeup.jpeg") center/cover no-repeat; }
 
 /* ==========================================================================
    Product page
@@ -563,4 +563,14 @@ main { padding-top: 4rem; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+/* Product photography inside art-block placeholders */
+.art-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 0;
 }

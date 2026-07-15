@@ -136,7 +136,7 @@
       .map(
         (it) => `
       <li class="cart-item" data-id="${it.id}">
-        <div class="art-block art-hero" style="width:5rem;height:5rem;border-radius:0.75rem;flex-shrink:0;"></div>
+        <div class="art-block art-hero" style="width:5rem;height:5rem;border-radius:0.75rem;flex-shrink:0;"><img src="images/product-box.jpeg" alt="${it.name}" loading="lazy"></div>
         <div class="cart-item-info">
           <div class="cart-item-top">
             <p class="cart-item-name">${it.name}</p>
